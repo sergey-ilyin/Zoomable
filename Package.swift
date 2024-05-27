@@ -1,4 +1,4 @@
-// swift-tools-version:5.5
+// swift-tools-version:5.6
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -16,10 +16,8 @@ let package = Package(
             targets: ["Zoomable"]),
     ],
     dependencies: [
-//        .package(url: "https://github.com/SDWebImage/SDWebImage.git", .branch("master")),
-        .package(url: "https://github.com/SDWebImage/SDWebImage.git", from: "5.10.0"),        
-//        .package(url: "https://github.com/SDWebImage/SDWebImageSwiftUI.git", .branch("master"))
-        .package(url: "https://github.com/SDWebImage/SDWebImageSwiftUI.git", exact: "3.0.4")
+		.package(url: "https://github.com/SDWebImage/SDWebImage.git", .upToNextMinor(from: "5.10.0")),
+		.package(url: "https://github.com/SDWebImage/SDWebImageSwiftUI.git", .upToNextMajor(from: "2.0.0")),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
